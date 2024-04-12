@@ -8,9 +8,9 @@ namespace SignInOrSignUp2.Entity
 {
     public abstract class BaseEntity
     {
-        private int _id = 0;
+        private static int _id = 0;
         public int ID { get; set; }
-        protected BaseEntity()
+        public BaseEntity()
         {
             ID = ++_id;
         }
