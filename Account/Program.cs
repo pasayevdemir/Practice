@@ -11,15 +11,13 @@ namespace Account
         [STAThread]
         static void Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             User admin = new User();
             admin.Login = "admin";
             admin.Email = "admin@gmail.com";
             admin.Password = "admin";
             DB.Database.users.Add(admin);
-            Application.Run(new Register());
+            Application.Run(new FrmAdmin());
         }
     }
 }

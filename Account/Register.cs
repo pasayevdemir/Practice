@@ -42,9 +42,8 @@ namespace Account
                         newUser.Password = txtPassword.Text;
                         DB.Database.users.Add(newUser);
                         MessageBox.Show("Qeydiyyat tamamlandı");
-                        Login login = new Login();
-                        login.Show();
                         this.Hide();
+                        btnLogin_Click(null, null);
                     }
                     else
                     {

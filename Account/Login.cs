@@ -40,7 +40,7 @@ namespace Account
                     }
                     else
                     {
-                        MessageBox.Show("Səhv Profil və ya Parol daxil etmisiniz!!");
+                        MessageBox.Show("Səhv Profil adı və ya Parol daxil etmisiniz!!");
                     }
                 }
                 else
@@ -76,9 +76,5 @@ namespace Account
             register.Show();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

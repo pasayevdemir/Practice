@@ -102,10 +102,12 @@
             // 
             // txtBxPassword
             // 
+            txtBxPassword.Font = new Font("Segoe UI", 12F);
             txtBxPassword.Location = new Point(75, 227);
             txtBxPassword.Name = "txtBxPassword";
-            txtBxPassword.Size = new Size(250, 23);
+            txtBxPassword.Size = new Size(250, 29);
             txtBxPassword.TabIndex = 4;
+            txtBxPassword.UseSystemPasswordChar = true;
             // 
             // label3
             // 
@@ -119,9 +121,10 @@
             // 
             // txtBxLogin
             // 
+            txtBxLogin.Font = new Font("Segoe UI", 12F);
             txtBxLogin.Location = new Point(75, 155);
             txtBxLogin.Name = "txtBxLogin";
-            txtBxLogin.Size = new Size(250, 23);
+            txtBxLogin.Size = new Size(250, 29);
             txtBxLogin.TabIndex = 2;
             // 
             // label2
@@ -143,7 +146,6 @@
             label1.Size = new Size(82, 23);
             label1.TabIndex = 0;
             label1.Text = "Sign IN";
-            label1.Click += label1_Click;
             // 
             // Login
             // 

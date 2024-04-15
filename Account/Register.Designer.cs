@@ -66,11 +66,13 @@
             // 
             // txtRepPassword
             // 
+            txtRepPassword.Font = new Font("Segoe UI", 12F);
             txtRepPassword.Location = new Point(125, 307);
+            txtRepPassword.Margin = new Padding(5);
             txtRepPassword.Name = "txtRepPassword";
-            txtRepPassword.PasswordChar = '*';
-            txtRepPassword.Size = new Size(250, 23);
+            txtRepPassword.Size = new Size(250, 29);
             txtRepPassword.TabIndex = 15;
+            txtRepPassword.UseSystemPasswordChar = true;
             // 
             // label5
             // 
@@ -138,9 +140,11 @@
             // 
             // txtUserName
             // 
+            txtUserName.Font = new Font("Segoe UI", 12F);
             txtUserName.Location = new Point(125, 138);
+            txtUserName.Margin = new Padding(5);
             txtUserName.Name = "txtUserName";
-            txtUserName.Size = new Size(250, 23);
+            txtUserName.Size = new Size(250, 29);
             txtUserName.TabIndex = 8;
             // 
             // label3
@@ -155,11 +159,13 @@
             // 
             // txtPassword
             // 
+            txtPassword.Font = new Font("Segoe UI", 12F);
             txtPassword.Location = new Point(125, 252);
+            txtPassword.Margin = new Padding(5);
             txtPassword.Name = "txtPassword";
-            txtPassword.PasswordChar = '*';
-            txtPassword.Size = new Size(250, 23);
+            txtPassword.Size = new Size(250, 29);
             txtPassword.TabIndex = 6;
+            txtPassword.UseSystemPasswordChar = true;
             // 
             // label1
             // 
@@ -173,9 +179,11 @@
             // 
             // txtEmail
             // 
+            txtEmail.Font = new Font("Segoe UI", 12F);
             txtEmail.Location = new Point(125, 193);
+            txtEmail.Margin = new Padding(5);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(250, 23);
+            txtEmail.Size = new Size(250, 29);
             txtEmail.TabIndex = 4;
             // 
             // label2
@@ -197,6 +205,7 @@
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Register";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Register";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
