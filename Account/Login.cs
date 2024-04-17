@@ -1,14 +1,5 @@
-﻿using Account.Models;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
+﻿using Models;
+using Accountt = Models.Account;
 namespace Account
 {
     public partial class Login : Form
@@ -25,7 +16,7 @@ namespace Account
 
         private void lblExit_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -34,9 +25,25 @@ namespace Account
             {
                 if (txtBxPassword.Text.Length > 3)
                 {
-                    if (CheckUser(txtBxLogin.Text, txtBxPassword.Text))
+                    if (CheckUser(txtBxLogin.Text, txtBxPassword.Text, out User model))
                     {
-                        this.Close();
+                        if (txtBxLogin.Text == "admin")
+                        {
+                            FrmAdmin frmAdmin = new FrmAdmin();
+                            this.Hide();
+                            frmAdmin.Show();
+                        }
+                        else
+                        {
+                            if (model is not null)
+                            {
+                                Accountt accountt = new Accountt(model);
+                                FrmAccount frmAccount = new FrmAccount(accountt);
+                                this.Hide();
+                                frmAccount.Show();
+                            }
+                        }
+
                     }
                     else
                     {
@@ -56,16 +63,18 @@ namespace Account
 
         }
 
-        private bool CheckUser(string login, string password)
+        private bool CheckUser(string login, string password, out User model)
         {
-            foreach (User user in DB.Database.users)
+            foreach (User user in DB.DataBase.users)
             {
-                if (login == user.Login && password == user.Password)
+                if (login == user.UserName && password == user.Password)
                 {
                     MessageBox.Show("Giriş uğurla başa çatdırıldı!");
+                    model = user;
                     return true;
                 }
             }
+            model = new User();
             return false;
         }
 

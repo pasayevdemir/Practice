@@ -185,7 +185,7 @@
             // txtBxDeletedUser
             // 
             txtBxDeletedUser.Font = new Font("Segoe UI", 12F);
-            txtBxDeletedUser.Location = new Point(28, 110);
+            txtBxDeletedUser.Location = new Point(86, 95);
             txtBxDeletedUser.Margin = new Padding(5);
             txtBxDeletedUser.Name = "txtBxDeletedUser";
             txtBxDeletedUser.Size = new Size(250, 29);
@@ -195,7 +195,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Tahoma", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(28, 89);
+            label4.Location = new Point(86, 74);
             label4.Name = "label4";
             label4.Size = new Size(82, 18);
             label4.TabIndex = 25;
@@ -209,7 +209,7 @@
             btnUserDelete.FlatAppearance.MouseOverBackColor = Color.Red;
             btnUserDelete.FlatStyle = FlatStyle.Flat;
             btnUserDelete.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnUserDelete.Location = new Point(133, 155);
+            btnUserDelete.Location = new Point(191, 140);
             btnUserDelete.Name = "btnUserDelete";
             btnUserDelete.Size = new Size(145, 35);
             btnUserDelete.TabIndex = 27;
@@ -224,16 +224,16 @@
             panel1.Controls.Add(txtBxDeletedUser);
             panel1.Controls.Add(btnUserDelete);
             panel1.Controls.Add(label4);
-            panel1.Location = new Point(491, 28);
+            panel1.Location = new Point(382, 73);
             panel1.Name = "panel1";
-            panel1.Size = new Size(297, 237);
+            panel1.Size = new Size(406, 192);
             panel1.TabIndex = 28;
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Tahoma", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(87, 29);
+            label6.Location = new Point(145, 29);
             label6.Name = "label6";
             label6.Size = new Size(106, 23);
             label6.TabIndex = 28;

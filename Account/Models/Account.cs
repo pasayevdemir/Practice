@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-    public abstract class BaseEntity
+    public class Account
     {
-        private static int _id = 0;
-        public int ID { get; set; }
-        public BaseEntity()
+        public User Profile { get; set; }
+        public Account(User user)
         {
-            ID = ++_id;
+            Profile = user;
         }
     }
 }

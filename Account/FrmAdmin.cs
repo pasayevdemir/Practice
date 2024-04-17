@@ -1,14 +1,4 @@
-﻿using Account.Models;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.Common;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using Models;
 
 namespace Account
 {
@@ -27,7 +17,7 @@ namespace Account
         private void FillTable()
         {
 
-            var data = DB.Database.users;
+            var data = DB.DataBase.users;
             int i = 0;
             dtTable.Rows.Clear();
             if (dtTable.Rows.Count < data.Count)
@@ -35,7 +25,7 @@ namespace Account
             foreach (var item in data)
             {
                 dtTable.Rows[i].Cells[0].Value = item.ID;
-                dtTable.Rows[i].Cells[1].Value = item.Login;
+                dtTable.Rows[i].Cells[1].Value = item.UserName ;
                 dtTable.Rows[i].Cells[2].Value = item.Email;
                 dtTable.Rows[i].Cells[3].Value = item.Password;
                 i++;
@@ -56,10 +46,10 @@ namespace Account
                     if (txtPassword.Text == txtRepPassword.Text)
                     {
                         User newUser = new User();
-                        newUser.Login = txtUserName.Text;
+                        newUser.UserName = txtUserName.Text;
                         newUser.Email = txtEmail.Text;
                         newUser.Password = txtPassword.Text;
-                        DB.Database.users.Add(newUser);
+                        DB.DataBase.users.Add(newUser);
                         MessageBox.Show("İstifadəçi əlavə olundu");
                         FillTable();
                     }
@@ -81,10 +71,10 @@ namespace Account
 
         private void btnUserDelete_Click(object sender, EventArgs e)
         {
-            var data = DB.Database.users.Find(x => x.Login == txtBxDeletedUser.Text);
+            var data = DB.DataBase.users.Find(x => x.UserName == txtBxDeletedUser.Text);
             if (data != null)
             {
-                DB.Database.users.Remove(data);
+                DB.DataBase.users.Remove(data);
                 FillTable();
                 MessageBox.Show("Silindi");
                 return;

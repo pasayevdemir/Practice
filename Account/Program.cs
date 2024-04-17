@@ -1,5 +1,6 @@
-using Account.Models;
 
+using Models;
+using Accountt = Models.Account;
 namespace Account
 {
     internal static class Program
@@ -13,11 +14,11 @@ namespace Account
         {
             ApplicationConfiguration.Initialize();
             User admin = new User();
-            admin.Login = "admin";
+            admin.UserName = "admin";
             admin.Email = "admin@gmail.com";
             admin.Password = "admin";
-            DB.Database.users.Add(admin);
-            Application.Run(new FrmAdmin());
+            DB.DataBase.users.Add(admin);
+            Application.Run(new Login());
         }
     }
 }
